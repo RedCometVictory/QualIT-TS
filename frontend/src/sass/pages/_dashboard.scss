@@ -7,16 +7,16 @@
     border: 1px solid blue;
     border-radius: 6px;
     h3 {
+      margin: 2.02rem 0 0;
       text-align: center;
     }
   }
   &__unauth-btns {
-    @include flex(row, center, center);
-    border: 2px solid yellow;
+    @include flex(row, space-evenly, center);
+    margin: 2.25rem 0;
+    // border: 2px solid yellow;
   }
-  &__unauth-btn {
-
-  }
+  // &__unauth-btn {}
   // ########### DASH-CARD ###########
   &__card {
     border: 1px solid blue;

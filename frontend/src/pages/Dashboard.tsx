@@ -1,28 +1,17 @@
 import { FC, ReactElement } from 'react';
 import ButtonUI from "../components/UI/ButtonUI";
 
-// interface MuiProps {
-//   props: {
-//     className: string;
-//     variant: string;
-//     href: string;
-//   };
-// }
+const loginHandler = () => {
+  console.log("logging in");
+};
+
+const registerHandler = () => {
+  console.log("registering");
+};
+
 // const isAuthenticated = true;
 const isAuthenticated = false;
 
-// {/* <ButtonUI
-//   props={
-//     {
-//       className: "world",
-//       variant: 'outlined',
-//       text: 'Sign Up',
-//       href: '/Sign-Up'
-//     }
-//   }
-// /> */}
-
-// const Dashboard: FC<MuiProps> = (): ReactElement => {
 const Dashboard: FC = (): ReactElement => {
   if (!isAuthenticated) {
     return (
@@ -30,25 +19,19 @@ const Dashboard: FC = (): ReactElement => {
         <div className="dash__unauth">
           <h3>Please Sign In.</h3>
           <div className="dash__unauth-btns">
-            {/* <ButtonUI
-              variant='outlined'
-            >
-              Hello World
-            </ButtonUI> */}
             <ButtonUI
               className="dash__unauth-btn"
               variant="contained"
-              // value={''}
-              // props={
-              //   {
-              //     className: "dash__unauth-btn",
-              //     variant: 'contained',
-              //     // text: 'Sign In',
-              //     href: '/Sign-In'
-              //   }
-              // }
+              onClick={loginHandler}
             >
               Sign In  
+            </ButtonUI>
+            <ButtonUI
+              className="dash__unauth-btn"
+              variant='outlined'
+              onClick={registerHandler}
+            >
+              Sign Up
             </ButtonUI>
           </div>
         </div>
