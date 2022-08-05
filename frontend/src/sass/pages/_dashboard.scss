@@ -1,0 +1,29 @@
+.dash {
+  width: 100%;
+  @include flex(column, center, center);
+  &__unauth {
+    margin: 0 auto;
+    width: 300px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    h3 {
+      text-align: center;
+    }
+  }
+  &__unauth-btns {
+    @include flex(row, center, center);
+    border: 2px solid yellow;
+  }
+  &__unauth-btn {
+
+  }
+  // ########### DASH-CARD ###########
+  &__card {
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+  }
+  &__heading-sec {}
+  &__header {}
+  // ########### DASH-CARD ###########
+}
